@@ -44,9 +44,24 @@
 }
 
 
-$serif-fonts: et-book, "Noto Serif SC", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif, "Noto Emoji";
-$sans-fonts: "Gill Sans", "Gill Sans MT", Calibri, sans-serif, "Noto Emoji";
-$mono-fonts: Consolas, "Liberation Mono", Menlo, Courier, monospace, "Noto Emoji";
+// colours
+
+/* light theme by default */
+:root {
+    --tufte-background: #fffff8;
+    --tufte-foreground: #111;
+    --tufte-foreground-secondary: #444;
+    --tufte-link: #9f0000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+	--tufte-background: #151515;
+	--tufte-foreground: #ddd;
+	--tufte-foreground-secondary: #ccc;
+	--tufte-link: #f8b8b8;
+    }
+}
 
 /* Tufte CSS styles */
 html {
@@ -59,18 +74,10 @@ body {
     margin-right: auto;
     padding-left: 12.5%;
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    background-color: #fffff8;
-    color: #111;
+    background-color: var(--tufte-background);
+    color: var(--tufte-foreground);
     max-width: 1400px;
     counter-reset: sidenote-counter;
-}
-
-/* Adds dark mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #151515;
-        color: #ddd;
-    }
 }
 
 h1 {
@@ -104,7 +111,7 @@ hr {
     height: 1px;
     width: 55%;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--tufte-foreground-secondary);
     margin: 1em 0;
     padding: 0;
 }
@@ -239,6 +246,7 @@ figure.fullwidth figcaption {
 a:link,
 a:visited {
     color: inherit;
+    text-decoration-color: var(--tufte-link);
     text-underline-offset: 0.1em;
     text-decoration-thickness: 0.05em;
 }
@@ -382,80 +390,80 @@ label.margin-toggle:not(.sidenote-number) {
 
 @media (max-width: 760px) {
     body {
-        width: 84%;
-        padding-left: 8%;
-        padding-right: 8%;
+	width: 84%;
+	padding-left: 8%;
+	padding-right: 8%;
     }
 
     hr,
     section > p,
     section > footer,
     section > table {
-        width: 100%;
+	width: 100%;
     }
 
     pre > code {
-        width: 97%;
+	width: 97%;
     }
 
     section > dl,
     section > ol,
     section > ul {
-        width: 90%;
+	width: 90%;
     }
 
     figure {
-        max-width: 90%;
+	max-width: 90%;
     }
 
     figcaption,
     figure.fullwidth figcaption {
-        margin-right: 0%;
-        max-width: none;
+	margin-right: 0%;
+	max-width: none;
     }
 
     blockquote {
-        margin-left: 1.5em;
-        margin-right: 0em;
+	margin-left: 1.5em;
+	margin-right: 0em;
     }
 
     blockquote p,
     blockquote footer {
-        width: 100%;
+	width: 100%;
     }
 
     label.margin-toggle:not(.sidenote-number) {
-        display: inline;
+	display: inline;
     }
 
     .sidenote,
     .marginnote {
-        display: none;
+	display: none;
     }
 
     .margin-toggle:checked + .sidenote,
     .margin-toggle:checked + .marginnote {
-        display: block;
-        float: left;
-        left: 1rem;
-        clear: both;
-        width: 95%;
-        margin: 1rem 2.5%;
-        vertical-align: baseline;
-        position: relative;
+	display: block;
+	float: left;
+	left: 1rem;
+	clear: both;
+	width: 95%;
+	margin: 1rem 2.5%;
+	vertical-align: baseline;
+	position: relative;
     }
 
     label {
-        cursor: pointer;
+	cursor: pointer;
     }
 
     div.table-wrapper,
     table {
-        width: 85%;
+	width: 85%;
     }
 
     img {
-        width: 100%;
+	width: 100%;
     }
 }
 
@@ -482,7 +490,7 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 ::selection {
-    color: #fffff8;
+    color: var(--tufte-background);
     background-color: #404040;
 }
 
@@ -491,9 +499,9 @@ a.heading-anchor {
     visibility: collapse;
 }
 
-h2 {
-    margin-top: 5.5rem;
-}
+// h2 {
+//     margin-top: 5.5rem;
+// }
 
 h2:hover > a.heading-anchor,
 h3:hover > a.heading-anchor {
@@ -509,11 +517,11 @@ hr {
     width: 75%;
     max-width: 45rem;
     border-style: solid none none none;
-    border-color: #111;
+    border-color: var(--tufte-foreground);
 }
 
 kbd {
-    border: 1px #111 solid;
+    border: 1px var(--tufte-foreground) solid;
     border-radius: 5px;
     padding-right: 2px;
     padding-left: 2px;
@@ -528,14 +536,14 @@ mark {
 /* ------------------------------------------------------------------------ */
 .list-page {
     ul {
-        list-style-type: none;
-        margin: -0.25em;
-        width: 87.5%;
-        max-width: 45rem;
+	list-style-type: none;
+	margin: -0.25em;
+	width: 87.5%;
+	max-width: 45rem;
     }
     li {
-        margin: 0;
-        /*font-size: 95%;*/
+	margin: 0;
+	/*font-size: 95%;*/
     }
 }
 .list-page .list-date {
@@ -554,7 +562,7 @@ table:not(.lntable) {
 }
 
 table:not(.lntable) tr th {
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid var(--tufte-foreground);
     text-transform: uppercase;
 }
 
@@ -565,7 +573,7 @@ table:not(.lntable) tr td {
 
 table.lntable {
     td.lntd {
-        padding: 0em;
+	padding: 0em;
     }
     border-spacing: 0;
     padding: 0;
@@ -583,16 +591,16 @@ table.lntable {
     margin-top: 4.4rem;
 
     li {
-        p {
-            width: 100%;
-            margin: 0;
-            padding: 0;
+	p {
+	    width: 100%;
+	    margin: 0;
+	    padding: 0;
 
-            a.footnote-backref {
-                font-size: 1.2rem;
-                text-decoration: none;
-            }
-        }
+	    a.footnote-backref {
+		font-size: 1.2rem;
+		text-decoration: none;
+	    }
+	}
     }
 }
 
@@ -743,7 +751,7 @@ p:lang(ja), span:lang(ja), {
 /* Footer, but with a different name to avoid conflicts with tufte.css */
 footer.page-footer{
     margin-top: 1.4rem;
-    color: #aaa;
+    color: var(--tufte-foreground-secondary);
     width: 95%;
     max-width: 45rem;
 }
@@ -752,11 +760,6 @@ footer.page-footer p {
     margin: 0em;
     /* light font looked odd on chrome */
     /*font-weight: lighter;*/
-}
-footer.page-footer a {
-    color: rgba(65, 70, 75, 1);
-    text-decoration: none;
-    background: transparent;
 }
 footer.page-footer hr {
     width: 100%;
