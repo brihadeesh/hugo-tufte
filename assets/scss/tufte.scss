@@ -69,6 +69,9 @@ html {
 }
 
 body {
+    // min-height: 100dvh;
+    // display: flex;
+    // flex-firection: column;
     width: 87.5%;
     margin-left: auto;
     margin-right: auto;
@@ -605,24 +608,6 @@ table.lntable {
 }
 
 /* ------------------------------------------------------------------------ */
-/* Styling for maths. */
-/* ------------------------------------------------------------------------ */
-
-/* mjx-container[jax="CHTML"][display="true"]::-webkit-scrollbar,
-.katex-display::-webkit-scrollbar {
-  display: none;
-}*/
-
-mjx-container[jax="CHTML"][display="true"],
-.katex-display {
-    overflow: auto;
-    overflow-y: hidden;
-    /*     -ms-overflow-style: none;
-    scrollbar-width: none; */
-}
-
-
-/* ------------------------------------------------------------------------ */
 /* Styling for margin/side notes. */
 /* ------------------------------------------------------------------------ */
 .marginnote .marginnote-ind,
@@ -749,8 +734,12 @@ p:lang(ja), span:lang(ja), {
 
 /// Pages
 /* Footer, but with a different name to avoid conflicts with tufte.css */
+// footer {
+//     margin-top: auto;
+// }
+
 footer.page-footer{
-    margin-top: 1.4rem;
+    // margin-top: 1.4rem;
     color: var(--tufte-foreground-secondary);
     width: 95%;
     max-width: 45rem;
