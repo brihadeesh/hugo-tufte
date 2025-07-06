@@ -12,9 +12,7 @@
   <p class="author">{{ .Params.author }}</p>
   {{- end -}}
 
-  {{- if not .Params.hidedate -}}
-  <p class="date">{{ .Date.Format "2006-01-02" }}</p>
-  {{- end -}}
+  <p class="date">{{ .Date.Format "01 Jan 2006" }}</p>
 
   {{- if not .Params.hidereadtime -}}
   <span>{{ .ReadingTime }} min read&nbsp;</span>
