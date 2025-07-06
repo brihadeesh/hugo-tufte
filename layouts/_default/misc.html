@@ -3,11 +3,10 @@
 
   <section>
     <h1 class="content-title">
-      {{- .Title -}}{{- if .Draft -}}&nbsp;:: Draft{{- end -}}
+      {{- .Title -}}
     </h1>
 
-    <p class="subtitle">{{ .Date.Format "01 Jan 2006" }} · <span>{{ .ReadingTime }} min read&nbsp;</span> · on <a href="/">{{.Site.Title}}</a> </p>
-
+        <p class="subtitle">on <a href="/">{{.Site.Title}}</a> </p>
   </section>
 
   <section>{{ .Content }}</section>

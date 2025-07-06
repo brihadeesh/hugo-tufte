@@ -1,0 +1,35 @@
+{{ define "main" }}
+<article id="main" class="home-page">
+
+  <header class="content-title">
+    <h1>{{ .Site.Title}}</h1>
+
+    <p class="subtitle">{{ .Site.Params.subtitle }} · <a href="/about/">About</a> </p>
+
+    <hr />
+  </header>
+
+  <section>
+    {{ .Content }}
+    <hr>
+  </section>
+
+  <section class="page-list">
+    <h2>Posts</h2>
+
+    {{ range (.Paginate (where .Site.RegularPages "Section" .Site.Params.homeCollection)).Pages }}
+    <h3 class="content-title">
+      {{ if .IsNode }}
+      <a href="{{ .Permalink }}">{{ .Title}}</a>
+      {{ else }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }}&nbsp;:: Draft{{end}}</a>
+      {{ end }}
+    </h3>
+
+    <date class="date">{{ .Params.Date | time.Format "2 Jan 2006" }}</date>
+    {{ end }}
+  </section>
+
+  {{ partial "footer.html" . }}
+</article>
+{{ end }}
