@@ -504,8 +504,8 @@ hr {
     margin-left: 0;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
-    width: 75%;
-    max-width: 45rem;
+    // width: 75%;
+    // max-width: 45rem;
     border-style: solid none none none;
     border-color: var(--tufte-foreground);
 }
@@ -706,8 +706,8 @@ table.lntable {
 footer.page-footer{
     // margin-top: 1.4rem;
     color: var(--tufte-foreground-secondary);
-    width: 87.5%;
-    max-width: 45rem;
+    width: 55%;
+    // max-width: 45rem;
 }
 footer.page-footer p {
     font-size: 1.2rem;
