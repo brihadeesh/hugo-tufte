@@ -79,7 +79,7 @@ body {
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     background-color: var(--tufte-background);
     color: var(--tufte-foreground);
-    max-width: 1400px;
+    max-width: 100dvw;
     counter-reset: sidenote-counter;
 }
 
@@ -263,8 +263,8 @@ img {
 .marginnote {
     float: right;
     clear: right;
-    margin-right: -60%;
-    width: 50%;
+    margin-right: -5%;
+    width: 40%;
     margin-top: 0.3rem;
     margin-bottom: 0;
     font-size: 1.1rem;
@@ -279,7 +279,7 @@ img {
 
 .sidenote-number:after,
 .sidenote:before {
-    font-family: et-book-roman-old-style;
+    font-variant: small-caps;
     position: relative;
     vertical-align: baseline;
 }
@@ -481,26 +481,12 @@ label.margin-toggle:not(.sidenote-number) {
 /* ------------------------------------------------------------------------ */
 /* Generic content, such as the index list pages */
 /* ------------------------------------------------------------------------ */
-:root * {
-    text-align: left;
-    text-rendering: optimizeLegibility;
-}
-
-:focus {
-    outline: medium auto currentColor;
-    outline: medium auto invert;
-    outline: 5px auto -webkit-focus-ring-color;
-}
 
 ::selection {
     color: var(--tufte-background);
     background-color: #404040;
 }
 
-a.heading-anchor {
-    display: none;
-    visibility: collapse;
-}
 
 // h2 {
 //     margin-top: 5.5rem;
@@ -585,27 +571,27 @@ table.lntable {
 /* ------------------------------------------------------------------------ */
 /* Styling for footnotes. */
 /* ------------------------------------------------------------------------ */
-.footnotes hr {
-    margin-top: 4.4em;
-}
+// .footnotes hr {
+//     margin-top: 4.4em;
+// }
 
-.footnotes ol {
-    width: 55%;
-    margin-top: 4.4rem;
+// .footnotes ol {
+//     width: 55%;
+//     margin-top: 4.4rem;
 
-    li {
-	p {
-	    width: 100%;
-	    margin: 0;
-	    padding: 0;
+//     li {
+// 	p {
+// 	    width: 100%;
+// 	    margin: 0;
+// 	    padding: 0;
 
-	    a.footnote-backref {
-		font-size: 1.2rem;
-		text-decoration: none;
-	    }
-	}
-    }
-}
+// 	    a.footnote-backref {
+// 		font-size: 1.2rem;
+// 		text-decoration: none;
+// 	    }
+// 	}
+//     }
+// }
 
 /* ------------------------------------------------------------------------ */
 /* Styling for margin/side notes. */
@@ -709,28 +695,6 @@ table.lntable {
     font-size: 1.2rem;
 }
 
-/* ------------------------------------------------------------------------ */
-/* Styling for i18n. */
-/* ------------------------------------------------------------------------ */
-
-/* reduce zh & ja font-size to match en */
-
-p:lang(zh), span:lang(zh),
-p:lang(ja), span:lang(ja), {
-    font-size: 1.2rem;
-}
-
-.sidenote:lang(zh),
-.marginnote:lang(zh) {
-    font-size: 0.5rem;
-}
-
-.sidenote:lang(ja),
-.marginnote:lang(ja) {
-    font-size: 0.9rem;
-}
-
-
 
 /// Pages
 /* Footer, but with a different name to avoid conflicts with tufte.css */
@@ -741,7 +705,7 @@ p:lang(ja), span:lang(ja), {
 footer.page-footer{
     // margin-top: 1.4rem;
     color: var(--tufte-foreground-secondary);
-    width: 95%;
+    width: 87.5%;
     max-width: 45rem;
 }
 footer.page-footer p {
