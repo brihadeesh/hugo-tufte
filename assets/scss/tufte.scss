@@ -231,7 +231,7 @@ figure {
 }
 
 figcaption {
-    float: right;
+    // float: right;
     clear: right;
     margin-top: 0;
     margin-bottom: 0;
@@ -239,11 +239,11 @@ figcaption {
     line-height: 1.6;
     vertical-align: baseline;
     position: relative;
-    max-width: 40%;
+    // max-width: 40%;
 }
 
 figure.fullwidth figcaption {
-    margin-right: 24%;
+    // margin-right: 24%;
 }
 
 a:link,
@@ -263,8 +263,9 @@ img {
 .marginnote {
     float: right;
     clear: right;
-    margin-right: -5%;
-    width: 40%;
+    margin-right: -60%;
+    margin-left: 0;
+    width: 50%;
     margin-top: 0.3rem;
     margin-bottom: 0;
     font-size: 1.1rem;
@@ -596,21 +597,21 @@ table.lntable {
 /* ------------------------------------------------------------------------ */
 /* Styling for margin/side notes. */
 /* ------------------------------------------------------------------------ */
-.marginnote .marginnote-ind,
-.sidenote .sidenote-number {
-    margin-right: 5px;
-}
+// .marginnote .marginnote-ind,
+// .sidenote .sidenote-number {
+//     margin-right: 5px;
+// }
 
-/* prevent over-crowding */
+// /* prevent over-crowding */
 
-.sidenote, .marginnote {
-    margin-bottom: 1rem;
-}
+// .sidenote, .marginnote {
+//     margin-bottom: 1rem;
+// }
 
-.sidenote code,
-.marginnote code {
-    font-size: 0.9rem;
-}
+// .sidenote code,
+// .marginnote code {
+//     font-size: 0.9rem;
+// }
 
 /* ------------------------------------------------------------------------ */
 /* Styling & fixes for cols. */
