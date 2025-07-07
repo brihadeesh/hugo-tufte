@@ -699,9 +699,9 @@ table.lntable {
 
 /// Pages
 /* Footer, but with a different name to avoid conflicts with tufte.css */
-// footer {
-//     margin-top: auto;
-// }
+footer.page-footer { */
+    margin-top: auto;
+}
 
 footer.page-footer{
     // margin-top: 1.4rem;
@@ -716,7 +716,11 @@ footer.page-footer p {
     /*font-weight: lighter;*/
 }
 footer.page-footer hr {
-    width: 100%;
+    width: 55%;
+
+    @media (max-width: 760px) {
+        width: 100%;
+    }
 }
 
 footer.page-footer ul.page-footer-menu {
