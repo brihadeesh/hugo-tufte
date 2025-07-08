@@ -6,7 +6,6 @@
 
     <p class="subtitle">{{ .Site.Params.subtitle }}</p>
 
-    <hr />
   </header>
 
   <section>
@@ -31,6 +30,8 @@
     {{ end }}
   </section>
 
-  {{ partial "footer.html" . }}
+  <section class="footer">
+    {{ partial "footer.html" . }}
+    </section>
 </article>
 {{ end }}

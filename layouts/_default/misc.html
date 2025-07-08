@@ -11,7 +11,9 @@
 
   <section>{{ .Content }}</section>
 
-  <section>{{ partial "footer.html" . }}</section>
+  <section class="footer">
+    {{ partial "footer.html" . }}
+  </section>
 
 </article>
 {{ end }}

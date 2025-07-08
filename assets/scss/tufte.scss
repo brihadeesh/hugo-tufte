@@ -699,51 +699,26 @@ table.lntable {
 
 /// Pages
 /* Footer, but with a different name to avoid conflicts with tufte.css */
-footer.page-footer {
+section > footer {
     margin-top: auto;
-}
-
-footer.page-footer{
-    // margin-top: 1.4rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--tufte-foreground-secondary);
     color: var(--tufte-foreground-secondary);
-    width: 97%;
-    // max-width: 45rem;
-}
-footer.page-footer p {
-    font-size: 1.2rem;
-    margin: 0em;
-    /* light font looked odd on chrome */
-    /*font-weight: lighter;*/
-}
-footer.page-footer hr {
     width: 55%;
 
     @media (max-width: 760px) {
         width: 100%;
     }
 }
-
-footer.page-footer ul.page-footer-menu {
-    list-style: none;
-    display: block;
-    /*text-align:center;*/
-    margin: 0;
-    padding: 0;
-    width: unset;
+section > footer p {
+    font-size: 1.2rem;
+    margin: 0em;
+    /* light font looked odd on chrome */
+    /*font-weight: lighter;*/
 }
-
-footer.page-footer ul.page-footer-menu li {
-    display: inline-block;
-    margin-right: 0.5rem;
-    // font-size: 55%;
+section > footer hr {
+    width: 100%;
 }
-
-.copyright {
-}
-.copyright p {
-    font-size: 90%;
-}
-
 
 /// Components
 /* Content meta-data such as author, publication date, etc. */
@@ -764,4 +739,13 @@ footer.page-footer ul.page-footer-menu li {
     border-radius: 50px;
     float: right;
     margin-left: 1em;
+}
+
+header.content-title {
+    border-bottom: 1px solid var(--tufte-foreground-secondary);
+    width: 55%;
+
+    @media (max-width: 760px) {
+        width: 100%;
+    }
 }
