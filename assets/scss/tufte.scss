@@ -137,10 +137,10 @@ p.subtitle {
 }
 
 article {
-    padding: 5rem 0rem;
-	min-height: 100dvh;
-	display: flex;
-	flex-direction: column;
+    padding: 5rem 0rem 0rem 0rem;
+	  min-height: 100dvh;
+	  display: flex;
+	  flex-direction: column;
 }
 
 section {
@@ -707,6 +707,8 @@ table.lntable {
 }
 
 section > footer {
+    margin-top: 5rem;
+    margin-top: 5rem;
     padding-top: 0.5rem;
     border-top: 1px solid var(--tufte-foreground-secondary);
     color: var(--tufte-foreground-secondary);
