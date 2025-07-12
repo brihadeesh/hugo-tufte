@@ -79,7 +79,7 @@ body {
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     background-color: var(--tufte-background);
     color: var(--tufte-foreground);
-    max-width: 100dvw;
+    max-width: 1400;
     counter-reset: sidenote-counter;
 }
 
@@ -128,9 +128,9 @@ p.subtitle {
     line-height: 1;
 }
 
-.numeral {
-    font-family: et-book-roman-old-style;
-}
+//.numeral {
+//    font-family: et-book-roman-old-style;
+//}
 
 .danger {
     color: red;
@@ -138,6 +138,9 @@ p.subtitle {
 
 article {
     padding: 5rem 0rem;
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
 }
 
 section {
