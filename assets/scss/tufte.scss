@@ -702,8 +702,11 @@ table.lntable {
 
 /// Pages
 /* Footer, but with a different name to avoid conflicts with tufte.css */
+section > .footer {
+	margin-top: auto;
+}
+
 section > footer {
-    margin-top: auto;
     padding-top: 0.5rem;
     border-top: 1px solid var(--tufte-foreground-secondary);
     color: var(--tufte-foreground-secondary);
