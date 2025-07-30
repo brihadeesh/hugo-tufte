@@ -6,20 +6,22 @@
 
 @charset "UTF-8";
 
-/* EB Garamond */
+/* Junicode */
 
 @font-face {
-    font-family: "eb-garamond";
-    font-style: normal;
+    font-family: "junicode";
+    src: url("/fonts/junicode/JunicodeVF-Roman.woff2") format("woff2");
     font-weight: normal;
-    src: url("/fonts/eb-garamond/EBGaramond12-Regular.woff") format("woff");
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "eb-garamond";
-    font-style: italic;
+    font-family: "junicode";
+    src: url("/fonts/junicode/JunicodeVF-Italic.woff2") format("woff2");
     font-weight: normal;
-    src: url("/fonts/eb-garamond/EBGaramond12-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
 }
 
 /* Import ET Book styles
@@ -82,11 +84,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-left: 12.5%;
-    font-family: et-book, eb-garamond, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-family: et-book, junicode, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     background-color: var(--tufte-background);
     color: var(--tufte-foreground);
     max-width: 100dvw;
     counter-reset: sidenote-counter;
+    font-feature-settings: "onum", "pnum";
 }
 
 h1 {
